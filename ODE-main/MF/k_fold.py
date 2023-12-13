@@ -1,8 +1,3 @@
-"""
-@Description: k折交叉验证
-@Author: tc
-@Time: 2021/6/23 16:55
-"""
 import torch
 import numpy as np
 
