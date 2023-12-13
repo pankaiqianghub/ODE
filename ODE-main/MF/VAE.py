@@ -96,11 +96,11 @@ def main():
     for epoch in tqdm(range(total_epochs), desc="Training Epochs"):
         vae.train()
         epoch_loss = 0.0
-        for i, (img,) in enumerate(VAE_dataloader):
-            img = img.to(device)
+        for i, (sample,) in enumerate(VAE_dataloader):
+            sample = sample.to(device)
             optimizer.zero_grad()
-            reconstructed, mu, log_var = vae(img)
-            loss = loss_fn(reconstructed, img, mu, log_var, w)
+            reconstructed, mu, log_var = vae(sample)
+            loss = loss_fn(reconstructed, sample, mu, log_var, w)
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
