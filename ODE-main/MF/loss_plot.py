@@ -1,8 +1,3 @@
-"""
-@Description: 绘制epochs次训练和测试损失的方法
-@Author: tc
-@Time: 2021/6/14 10:54
-"""
 import matplotlib.pyplot as plt
 from IPython import display
 
